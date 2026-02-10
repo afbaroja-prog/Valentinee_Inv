@@ -1,0 +1,142 @@
+
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            background-color: #e64f4f;
+            font-family: 'Comic Sans MS', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #410101;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-style: oblique;
+            
+        }
+
+        h2 {
+            color: #ffd6d6;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-style: oblique;
+           font-weight: bold;
+        }
+        h3 {
+            color: #ff6b6b;
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-style: oblique;
+        }
+
+        .buttons {
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        #yesBtn {
+            background-color: #97cdff;
+            color: white;
+            z-index: 2;
+        }
+
+        #noBtn {
+            background-color: #ff6b6b;
+            color: white;
+            z-index: 1;
+        }
+
+        .gif {
+            margin: 20px 0;
+        }
+
+        .giff {
+            width: 200px;
+            height: auto;
+            margin: auto;
+        }
+
+
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            color: #ff6b6b;
+            font-size: 1.2em;
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Can I be your valentine po? 💝</h1>
+        <div class="gif">
+            <img src="ws9f763024u71.gif" alt="Cute gif">
+        </div>
+        <div class="buttons">
+            <button id="yesBtn">Yes:]</button>
+            <button id="noBtn">No >:(</button>
+        </div>
+    </div>
+    <div class="footer">From <span id="from">awi</span> to <span id="to">my baby vee</span>💗</div>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromParam = urlParams.get('from');
+        const toParam = urlParams.get('to');
+
+       
+        if (fromParam) document.getElementById('from').textContent = fromParam;
+        if (toParam) document.getElementById('to').textContent = toParam;
+
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const container = document.querySelector('.container');
+        let yesBtnSize = 1;
+        let noBtnSize = 1;
+
+        noBtn.addEventListener('click', () => {
+            yesBtnSize *= 1.25;
+            yesBtn.style.transform = `scale(${yesBtnSize})`;
+            noBtnSize -= 0.1;
+            noBtn.style.transform = `scale(${noBtnSize})`;
+        });
+
+        yesBtn.addEventListener('click', () => {
+            container.innerHTML = `
+                <h2>YAAAY 
+                    I love u so much babyyyyy ko :>> </h2>
+                <div class="gif">
+                    <img src="cutie.gif" alt="Love gif">
+                </div>
+                <h3> mwaaaaaaa ( ˶˘ ³˘)♡ <3 </h3>
+                  
+            `;
+        });
+    </script>
+</body>
+</html>
