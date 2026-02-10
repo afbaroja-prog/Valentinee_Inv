@@ -3,4 +3,4 @@ for my gf
 it's an invitation for the woman i love in valentines day.
 she's the greatest woman i've ever met, and i love her.
 
-git@github.com:afbaroja-prog/Valentinee_Inv.git
+https://afbaroja-prog.github.io/Valentinee_Inv/
